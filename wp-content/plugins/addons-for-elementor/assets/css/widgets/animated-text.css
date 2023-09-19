@@ -1,0 +1,47 @@
+/* ---------------------------------- Animated Text Widget ---------------------------------- */
+.lae-animated-text {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .lae-animated-text.lae-align-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .lae-animated-text.lae-align-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .lae-animated-text.lae-align-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .lae-animated-text .lae-animated-text-items {
+    display: grid;
+    padding: 0 10px; }
+    .lae-animated-text .lae-animated-text-items .lae-animated-text-item {
+      grid-area: 1 / 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .lae-animated-text .lae-animated-text-items .lae-animated-text-item span {
+        display: block;
+        position: relative;
+        white-space: pre;
+        opacity: 0;
+        display: none; }
+      .lae-animated-text .lae-animated-text-items .lae-animated-text-item.lae-visible span {
+        display: block; }
+
+/*# sourceMappingURL=animated-text.css.map */

@@ -1,0 +1,75 @@
+<?php if ( forminator_array_value_exists( $properties, 'cform-color-settings' ) ) { ?>
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent,
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent__label,
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent__label p {
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-label' ) && !empty( $properties['consent-cbox-label'] ) ) { ?>
+			color: <?php echo $properties['consent-cbox-label'] ?>;
+		<?php } else { ?>
+			color: #000000;
+		<?php } ?>
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-checkbox.forminator-consent .forminator-checkbox-box {
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-border-static' ) && !empty( $properties['consent-cbox-border-static'] ) ) { ?>
+			border-color: <?php echo $properties['consent-cbox-border-static'] ?>;
+		<?php } else { ?>
+			border-color: #777771;
+		<?php } ?>
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-background-static' ) && !empty( $properties['consent-cbox-background-static'] ) ) { ?>
+			background-color: <?php echo $properties['consent-cbox-background-static'] ?>;
+		<?php } else { ?>
+			background-color: #EDEDED;
+		<?php } ?>
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-icon' ) && !empty( $properties['consent-cbox-icon'] ) ) { ?>
+			color: <?php echo $properties['consent-cbox-icon'] ?>;
+		<?php } else { ?>
+			color: #17A8E3;
+		<?php } ?>
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent input:checked + .forminator-checkbox-box {
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-border-active' ) && !empty( $properties['consent-cbox-border-active'] ) ) { ?>
+			border-color: <?php echo $properties['consent-cbox-border-active'] ?>;
+		<?php } else { ?>
+			border-color: #17A8E3;
+		<?php } ?>
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-background-active' ) && !empty( $properties['consent-cbox-background-active'] ) ) { ?>
+			background-color: <?php echo $properties['consent-cbox-background-active'] ?>;
+		<?php } else { ?>
+			background-color: #EDEDED;
+		<?php } ?>
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-has_error .forminator-consent .forminator-checkbox-box {
+		<?php if ( forminator_array_value_exists( $properties, 'consent-cbox-border-error' ) && !empty( $properties['consent-cbox-border-error'] ) ) { ?>
+			border-color: <?php echo $properties['consent-cbox-border-error'] ?>;
+		<?php } else { ?>
+			border-color: #E04562;
+		<?php } ?>
+	}
+
+<?php } else { ?>
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent,
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent__label,
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent__label p {
+		color: #000000;
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent .forminator-checkbox-box {
+		border-color: #777771;
+		background-color: #EDEDED;
+		color: #17A8E3;
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-consent input:checked + .forminator-checkbox-box {
+		border-color: #17A8E3;
+		background-color: #EDEDED;
+	}
+
+	.forminator-ui#forminator-module-<?php echo $properties['form_id'] ?>.forminator-design--<?php echo $theme; ?> .forminator-has_error .forminator-consent .forminator-checkbox-box {
+		border-color: #E04562;
+	}
+
+<?php } ?>

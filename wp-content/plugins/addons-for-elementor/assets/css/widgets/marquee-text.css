@@ -1,0 +1,123 @@
+/* ---------------------------------- Marquee Text Widget ---------------------------------- */
+.lae-marquee-text-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden; }
+
+.lae-marquee-text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden; }
+  .lae-marquee-text-content .lae-marquee-text-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .lae-marquee-text-content .lae-marquee-text-items:hover {
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused; }
+    .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-text {
+      font-size: 96px;
+      line-height: 1.2;
+      padding: 0;
+      -webkit-transition: color 0.3s ease-out;
+      transition: color 0.3s ease-out; }
+    .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-subtext {
+      font-size: 24px;
+      line-height: 1.4; }
+    .lae-marquee-text-content .lae-marquee-text-items .lae-separator-icon {
+      -ms-flex-item-align: center;
+          align-self: center; }
+      .lae-marquee-text-content .lae-marquee-text-items .lae-separator-icon .lae-icon-wrapper, .lae-marquee-text-content .lae-marquee-text-items .lae-separator-icon .lae-image-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .lae-marquee-text-content .lae-marquee-text-items .lae-separator-icon .lae-icon-wrapper i {
+        font-size: 30px; }
+      .lae-marquee-text-content .lae-marquee-text-items .lae-separator-icon .lae-image-wrapper img {
+        max-width: 100px;
+        height: auto; }
+    .lae-marquee-text-content .lae-marquee-text-items:not(.lae-clone) {
+      -webkit-animation: lae-horizontal-scroll 20s linear infinite;
+              animation: lae-horizontal-scroll 20s linear infinite; }
+    .lae-marquee-text-content .lae-marquee-text-items.lae-clone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      will-change: transform;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+      -webkit-animation: lae-horizontal-scroll-alt 20s linear infinite;
+              animation: lae-horizontal-scroll-alt 20s linear infinite; }
+
+@-webkit-keyframes lae-horizontal-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+
+@keyframes lae-horizontal-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+@-webkit-keyframes lae-horizontal-scroll-alt {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@keyframes lae-horizontal-scroll-alt {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@-webkit-keyframes lae-horizontal-reverse-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+@keyframes lae-horizontal-reverse-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+@-webkit-keyframes lae-horizontal-reverse-scroll-alt {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@keyframes lae-horizontal-reverse-scroll-alt {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+/*# sourceMappingURL=marquee-text.css.map */
